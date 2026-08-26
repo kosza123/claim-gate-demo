@@ -9,3 +9,5 @@ Live:
 
 `uses: kosza123/claim-gate@main` fails while both repos are private.
 Open Access on claim-gate, or run vendored `gate.py` (what the demo PRs do).
+
+skipping claim
