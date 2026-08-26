@@ -1,0 +1,8 @@
+{
+  "producer": "ci",
+  "claim_success": false,
+  "evidence": {
+    "opening_balance": 40,
+    "withdrawals": [10]
+  }
+}

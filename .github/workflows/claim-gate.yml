@@ -9,22 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - name: Judge claim.json
-        run: |
-          mkdir -p out
-          if [ -f claim.json ]; then
-            python3 gate.py --claim claim.json --law LAW.md --out out || true
-          else
-            echo INCOMPLETE > out/verdict.txt
-            printf '%s\n' '## Claim Gate' '' 'INCOMPLETE — no claim.json.' > out/comment.md
-          fi
-          cat out/comment.md
-      - uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: claim-gate
-          path: out/comment.md
-      - name: Fail closed
-        run: test "$(tr -d '\n' < out/verdict.txt)" = "ADMIT"
+          fetch-depth: 0
+      - uses: kosza123/claim-gate@f356127d99eea3514f86434ed92e52d671a0961e
