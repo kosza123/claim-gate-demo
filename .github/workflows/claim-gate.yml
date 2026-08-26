@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: kosza123/claim-gate@f356127d99eea3514f86434ed92e52d671a0961e
+      - uses: kosza123/claim-gate@89ae437dd46efb8a0b76df702dc1522b3be7b01a
