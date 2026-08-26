@@ -1,0 +1,10 @@
+{
+  "producer": "coding-agent",
+  "claim_success": true,
+  "change": "withdraw() with guard",
+  "laws": ["balance"],
+  "evidence": {
+    "opening_balance": 40,
+    "withdrawals": [10, 20]
+  }
+}
